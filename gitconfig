@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
   name = Hogan McDonald
-  email = hogan@foundrymakes.com
+  email = hpeter.mcdonald@icloud.com
 [color]
   ui = auto
 [alias]
@@ -14,5 +14,4 @@
   st = status
 [fetch]
   prune = true
-[includeIf "gitdir:~/personal/"]
-    path = ~/personal/.gitconfig
+

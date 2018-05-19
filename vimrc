@@ -17,6 +17,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tomasiser/vim-code-dark'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'JamshedVesuna/vim-markdown-preview'
 
 call vundle#end()           " required
 filetype plugin indent on   " requiredn

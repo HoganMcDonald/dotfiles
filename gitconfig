@@ -1,7 +1,4 @@
 # This is Git's per-user configuration file.
-[user]
-  name = Hogan McDonald
-  email = hpeter.mcdonald@icloud.com
 [color]
   ui = auto
 [alias]
@@ -12,6 +9,7 @@
   co = checkout
   pf = push --force-with-lease
   st = status
+  
 [fetch]
   prune = true
 

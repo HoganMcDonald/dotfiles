@@ -1,19 +1,23 @@
 # Version Managers
 export PATH="$PATH:$HOME/.rvm/bin"
-source /usr/local/bin/virtualenvwrapper.sh
 source ~/.zsh-nvm/zsh-nvm.plugin.zsh
 
 # Set Spaceship ZSH as a prompt
 autoload -U promptinit; promptinit
 prompt spaceship
 
+# virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Devel
+# export PROJECT_HOME=$HOME/projects
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.6
+source /usr/local/bin/virtualenvwrapper.sh
 
 # Aliases
 alias lt='tree'
 alias ll='ls -la'
 alias lh='ls -a | egrep "^\."'
+alias gitter='git rev-parse --abbrev-ref HEAD'
+alias cleanup='git branch | grep -v "master" | xargs git branch -d'
 
 # Functions
 function hiddenOn() { defaults write com.apple.Finder AppleShowAllFiles YES ; }

@@ -10,9 +10,9 @@ fi
 cp $DIR/sample.gitconfig.local ~/dotfiles-local/gitconfig.local
 
 # open it in vim so you can add your credentials
-vim $DIR/gitconfig.local
+vim ~/dotfiles-local/gitconfig.local
 
-echo 'updating dotfile symlinks'
+echo '\n updating dotfile symlinks'
 
 # update .gitconfig to use your credentials
 rcup

@@ -13,11 +13,10 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.6
 source /usr/local/bin/virtualenvwrapper.sh
 
 # Aliases
+alias ls='ls -G'
 alias lt='tree'
 alias ll='ls -la'
 alias lh='ls -a | egrep "^\."'
-alias gitter='git rev-parse --abbrev-ref HEAD'
-alias cleanup='git branch | grep -v "master" | xargs git branch -d'
 
 # Functions
 function hiddenOn() { defaults write com.apple.Finder AppleShowAllFiles YES ; }

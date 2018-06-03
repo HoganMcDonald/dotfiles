@@ -38,19 +38,36 @@ which zsh
 chsh -s $(which zsh) 
 ```
 
-5. [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts#option-4-homebrew-fonts) - These give you cool icons and monospace fonts that are used by other tools.
+5. [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) - for mananging your zsh plugins
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
+6. [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts#option-4-homebrew-fonts) - These give you cool icons and monospace fonts that are used by other tools.
 ```bash
 brew tap caskroom/fonts
 brew cask install font-hack-nerd-font
 ```
 
-6. [spaceship-prompt](https://github.com/denysdovhan/spaceship-prompt)
-- If you would like to use oh-my-zsh go right ahead, I haven't gone down that rabbit hole yet, so...
+7. [spaceship-prompt](https://github.com/denysdovhan/spaceship-prompt)
+- I am choosing to use oh-my-zsh to install this, but you can use npm or whatever method you please.
 ```bash
-npm install -g spaceship-prompt
+# clone the repo into custom zsh
+git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+
+# Create a symlink to your custom oh-my-zsh theme 
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 ```
 
-7. [vundle](https://github.com/VundleVim/Vundle.vim)
+8. [zsh-nvm](https://github.com/lukechilds/zsh-nvm)
+```bash
+# clone the repo into custom zsh
+git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
+
+
+```
+
+8. [vundle](https://github.com/VundleVim/Vundle.vim)
 - tool for managing and installing vim plugins
 ```bash
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim

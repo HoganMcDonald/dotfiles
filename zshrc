@@ -15,11 +15,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:$HOME/composer/vendor/bin"
 export PATH="/usr/local/sbin:$PATH"
 
-# virtualenv
-export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.6
-source /usr/local/bin/virtualenvwrapper.sh
-
 # Aliases
 alias ls='ls -G'
 alias lt='tree'

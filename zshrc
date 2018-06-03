@@ -27,11 +27,11 @@ alias ll='ls -lFh'
 alias lh='ls -a | egrep "^\."'
 
 # Functions
-function hidden-on() { 
+function hidden_on() { 
     defaults write com.apple.Finder AppleShowAllFiles YES; 
 }
 
-function hidden-off() { 
+function hidden_off() { 
     defaults write com.apple.Finder AppleShowAllFiles NO; 
 }
 
@@ -44,6 +44,10 @@ function zshrc() {
     vim ~/dotfiles/zshrc &&
     rcup &&
     . ~/.zshrc
+}
+
+function rmrc() {
+    lsrc | awk -F':' '{print $1}' | xargs rm
 }
 
 function print_path() {

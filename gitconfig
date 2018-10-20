@@ -1,6 +1,7 @@
 # This is Git's per-user configuration file.
 [color]
   ui = auto
+  
 [alias]
   aa = add --all
   br = branches
@@ -22,3 +23,11 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+
+[user]
+  name = Hogan McDonald
+  email = "if [[ ! -f ~/gituser ]]; then EM='hogan.developer@gmail.com'; else EM=`command cat ~/gituser`; fi; echo $EM;"
+
+[pager]
+  diff = diff-so-fancy | less --tabs=1,5 -RFX
+  show = diff-so-fancy | less --tabs=1,5 -RFX

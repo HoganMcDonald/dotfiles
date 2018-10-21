@@ -5,9 +5,7 @@ export ZSH=/Users/hoganmcdonald/.oh-my-zsh
 ZSH_THEME="spaceship"
 
 # load zsh plugins
-plugins=(
-  zsh-nvm
-)
+plugins+=(zsh-nvm)
 source $ZSH/oh-my-zsh.sh
 
 # Version Managers
@@ -20,6 +18,13 @@ alias ls='ls -G'
 alias lt='tree'
 alias ll='ls -lFh'
 alias lh='ls -a | egrep "^\."'
+alias ping='prettyping --nolegend'
+alias cat='bat'
+alias preview="fzf --preview 'bat --color \"always\" {}'"
+alias top='htop'
+
+# fzf open in vscode
+export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 
 # Functions
 function hidden_on() { 

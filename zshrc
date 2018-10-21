@@ -26,15 +26,20 @@ alias top='htop'
 # fzf open in vscode
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 
+# call nvm use when nvmrc is present
+autoload -U add-zsh-hook
+load-nvmrc() {
+  if [[ -f .nvmrc && -r .nvmrc ]]; then
+    nvm use
+  elif [[ $(nvm version) != $(nvm version default)  ]]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+
 # Functions
-function hidden_on() { 
-    defaults write com.apple.Finder AppleShowAllFiles YES; 
-}
-
-function hidden_off() { 
-    defaults write com.apple.Finder AppleShowAllFiles NO; 
-}
-
 function vimrc() {
     vim ~/dotfiles/vimrc &&
     rcup
@@ -46,19 +51,11 @@ function zshrc() {
     . ~/.zshrc
 }
 
-function rmrc() {
-    lsrc | awk -F':' '{print $1}' | xargs rm
-}
-
 function print_path() {
     echo $PATH | sed $'s/:/\\\n/g'
 }
 
-# myIP address
-function myip() {
-    ifconfig lo0 | grep 'inet ' | sed -e 's/:/ /' | awk '{print "lo0       : " $2}'
-	ifconfig en0 | grep 'inet ' | sed -e 's/:/ /' | awk '{print "en0 (IPv4): " $2 " " $3 " " $4 " " $5 " " $6}'
-	ifconfig en0 | grep 'inet6 ' | sed -e 's/ / /' | awk '{print "en0 (IPv6): " $2 " " $3 " " $4 " " $5 " " $6}'
-	ifconfig en1 | grep 'inet ' | sed -e 's/:/ /' | awk '{print "en1 (IPv4): " $2 " " $3 " " $4 " " $5 " " $6}'
-	ifconfig en1 | grep 'inet6 ' | sed -e 's/ / /' | awk '{print "en1 (IPv6): " $2 " " $3 " " $4 " " $5 " " $6}'
+# works well with rcrc
+function rmrc() {
+    lsrc | awk -F':' '{print $1}' | xargs rm
 }

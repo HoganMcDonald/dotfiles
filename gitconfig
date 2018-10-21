@@ -19,17 +19,19 @@
   prune = true
 
 [filter "lfs"]
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
 
 [pager]
   diff = diff-so-fancy | less --tabs=1,5 -RFX
   show = diff-so-fancy | less --tabs=1,5 -RFX
 
+[user]
+  name = Hogan McDonald
+  email = hogan.developer@gmail.com
+
 # loads user email based on directory location
-[includeIf "gitdir:~/projects/"]
-  path = .gitconfig-personal
 [includeIf "gitdir:~/foundry/"]
   path = .gitconfig-work

@@ -1,1 +1,1 @@
-git branch | grep -v "master" | xargs git branch -d
+git branch | grep -v "master\|develop" | xargs git branch -D

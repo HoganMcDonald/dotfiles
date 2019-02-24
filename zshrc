@@ -16,12 +16,13 @@ export PATH="/usr/local/sbin:$PATH"
 # Aliases
 alias ls='ls -G'
 alias lt='tree'
-alias ll='ls -lFh'
+alias ll='ls -lFha'
 alias lh='ls -a | egrep "^\."'
 alias ping='prettyping --nolegend'
 alias cat='bat'
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias top='htop'
+alias man='tldr'
 
 # fzf open in vscode
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"

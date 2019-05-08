@@ -1,6 +1,6 @@
 # This is Git's per-user configuration file.
 [color]
-  ui = auto
+	ui = true
 
 [alias]
   aa = add --all
@@ -33,5 +33,17 @@
   email = hogan.developer@gmail.com
 
 # loads user email based on directory location
-[includeIf "gitdir:~/foundry/"]
+[includeIf "gitdir:~/brandless.com"]
   path = .gitconfig-work
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = yellow
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse

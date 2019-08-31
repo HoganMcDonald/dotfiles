@@ -49,11 +49,11 @@ chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
-6. [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts#option-4-homebrew-fonts) - These give you cool icons and monospace fonts that are used by other tools.
+6. [Fira Code](https://github.com/tonsky/FiraCode) - my prefered system font
 
 ```bash
-brew tap caskroom/fonts
-brew cask install font-hack-nerd-font
+brew tap homebrew/cask-fonts
+brew cask install font-fira-code
 ```
 
 7. [spaceship-prompt](https://github.com/denysdovhan/spaceship-prompt)
@@ -94,6 +94,13 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 ```bash
 brew install prettyping bat htop fzf diff-so-fancy
+```
+
+10. zsh plugins
+
+```bash
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 ```
 
 ## Install

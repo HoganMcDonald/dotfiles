@@ -34,6 +34,7 @@ set nobackup                " get rid of anoying ~file
 set pastetoggle=<F9>        " Useful so auto-indenting doesn't mess up code when pasting
 set backspace=indent,eol,start
 set showcmd                 " show command in bottom bar
+set spelllang=en
 
 " ui settings
 set showmatch               " highlight matching [{()}]

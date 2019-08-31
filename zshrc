@@ -5,7 +5,11 @@ export ZSH=/Users/hoganmcdonald/.oh-my-zsh
 ZSH_THEME="spaceship"
 
 # load zsh plugins
-plugins+=(zsh-nvm)
+plugins+=(
+    zsh-nvm
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+)
 source $ZSH/oh-my-zsh.sh
 
 COMPLETION_WAITING_DOTS="false"

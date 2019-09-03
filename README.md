@@ -103,6 +103,13 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 ```
 
+11. install spacevim
+
+```
+curl -sLf https://spacevim.org/install.sh | bash
+cp ~/dotfiles/.SpaceVim.d/init.toml ~/.SpaceVim.d/init.toml
+```
+
 ## Install
 
 ```bash

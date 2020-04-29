@@ -77,4 +77,7 @@ HEROKU_AC_ZSH_SETUP_PATH=/Users/hoganmcdonald/Library/Caches/heroku/autocomplete
 
 alias mycli='mycli -u root -h localhost brandless --auto-vertical-output'
 
-alias code='code ~/brandless.code-workspace'
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+[ -f "/Users/hoganmcdonald/.shopify-app-cli/shopify.sh" ] && source "/Users/hoganmcdonald/.shopify-app-cli/shopify.sh"
+
